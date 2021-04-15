@@ -23,7 +23,3 @@ class user(object):
   def __init__(self, nameIn, passwordIn):
   	username = nameIn
   	password = passwordIn
-
-  def sned2Database(self, username):
-  	
-
