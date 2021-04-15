@@ -71,6 +71,24 @@ class group(object):
     else:
         return False
 
+  def _addWaitlist(self, player, code):
+    """
+     
+
+    @param user badPerson : 
+    @return bool :
+    @author
+    """
+    if code == joinCode and privacy == "public"
+      waitlist.add(player)
+      return True
+    else if privacy == "private":
+      requestAdmin(player)
+      return False
+    else:
+      return False
+
+
   def _addPlayer(self, player):
     """
      
@@ -118,7 +136,30 @@ class group(object):
     else: 
       return False
 
-def _setGenre(genre):
-  game.setGenre(genre)
+  def _setGenre(genre):
+    """
+     
+
+    @param user badPerson : 
+    @return bool :
+    @author
+    """
+    game.setGenre(genre)
+    return True
+
+  def requestAdmin(player):
+    """
+     
+
+    @param user badPerson : 
+    @return bool :
+    @author
+    """
+    # Notify admin, add or deny player via UI
+    if approve():
+      memberList.add(player)
+      return approve()
+    else:
+      return False
 
 
