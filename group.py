@@ -57,7 +57,12 @@ class group(object):
     @return bool :
     @author
     """
-    pass
+    if badPerson in memberList:
+        memberList.remove(badPerson)
+        banList.add(badPerson)
+        return true
+    else:
+        return false
 
   def _addPlayer(self, player):
     """
