@@ -6,50 +6,35 @@ class group(object):
 
   """
    
-
   :version:
   :author:
   """
 
   """ ATTRIBUTES
-
    
-
   adminList  (private)
-
    
-
   memberList  (private)
-
    
-
   banList  (private)
-
    
-
   groupName  (protected)
-
    
-
   games  (protected)
-
    
-
   waitList  (private)
-
   """
   def __init__(self, nameIn):
-      adminList = []
-      memberList = []
-      banList = []
-      groupName = nameIn
-      games = []
-      waitList = []
+      global adminList = []
+      global memberList = []
+      global banList = []
+      global groupName = nameIn
+      global games = []
+      global waitList = []
       
   def _launchGame(self, gameToLaunch):
     """
      
-
     @param game gameToLaunch : 
     @return bool :
     @author
@@ -59,7 +44,6 @@ class group(object):
   def _banPlayer(self, badPerson):
     """
      
-
     @param user badPerson : 
     @return bool :
     @author
@@ -74,7 +58,6 @@ class group(object):
   def _addPlayer(self, player):
     """
      
-
     @param user player : 
     @return bool :
     @author
@@ -89,7 +72,6 @@ class group(object):
   def _addAdmin(self, player):
     """
      
-
     @param user player : 
     @return bool :
     @author
@@ -103,7 +85,6 @@ class group(object):
   def _setAttributes(self,player,name,genre):
     """
      
-
     @param user player : 
     @return bool :
     @author
@@ -114,6 +95,3 @@ class group(object):
       return True 
     else: 
       return False
-
-
-
