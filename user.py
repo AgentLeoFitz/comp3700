@@ -1,5 +1,5 @@
 # coding=UTF-8
-
+import group
 class user(object):
 
   """
@@ -20,6 +20,5 @@ class user(object):
   password  (private)
 
   """
-
 
 
