@@ -67,9 +67,9 @@ class group(object):
     if badPerson in memberList:
         memberList.remove(badPerson)
         banList.add(badPerson)
-        return true
+        return True
     else:
-        return false
+        return False
 
   def _addPlayer(self, player):
     """
@@ -81,10 +81,39 @@ class group(object):
     """
     if player in waitlist:
         memberList.add(player)
-        return true
+        return True
     else:
-        return false
+        return False
     pass
+
+  def _addAdmin(self, player):
+    """
+     
+
+    @param user player : 
+    @return bool :
+    @author
+    """
+    if player in memberList:
+      adminList.add(player)
+      return True
+    else:
+      return False
+
+  def _setAttributes(self,player,name,genre):
+    """
+     
+
+    @param user player : 
+    @return bool :
+    @author
+    """
+    if player in adminList:
+      groupName = name
+      games.setGenre(genre)
+      return True 
+    else: 
+      return False
 
 
 
