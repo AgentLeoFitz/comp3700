@@ -21,5 +21,8 @@ class user(object):
 
   """
   def __init__(self, nameIn, passwordIn):
-  	username = nameIn
-  	password = passwordIn
+    global username = nameIn
+    global password = passwordIn
+
+  def getName(self):
+    return username
