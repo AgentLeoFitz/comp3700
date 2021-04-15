@@ -38,7 +38,13 @@ class group(object):
   waitList  (private)
 
   """
-
+  def __init__(self, nameIn):
+      adminList = []
+      banList = []
+      groupName = nameIn
+      games = []
+      waitList = []
+      
   def _launchGame(self, gameToLaunch):
     """
      
