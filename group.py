@@ -147,7 +147,7 @@ class group(object):
     game.setGenre(genre)
     return True
 
-  def requestAdmin(player):
+  def _requestAdmin(player):
     """
      
 
@@ -156,6 +156,8 @@ class group(object):
     @author
     """
     # Notify admin, add or deny player via UI
+    # For testing, approve() = True
+    approve = True
     if approve():
       memberList.add(player)
       return approve()
