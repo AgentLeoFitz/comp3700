@@ -83,8 +83,8 @@ class group(object):
       waitlist.add(player)
       return True
     else if privacy == "private":
-      requestAdmin(player)
-      return False
+      approval = requestAdmin(player)
+      return approval
     else:
       return False
 
