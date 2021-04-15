@@ -40,6 +40,7 @@ class group(object):
   """
   def __init__(self, nameIn):
       adminList = []
+      memberList = []
       banList = []
       groupName = nameIn
       games = []
@@ -78,6 +79,11 @@ class group(object):
     @return bool :
     @author
     """
+    if player in waitlist:
+        memberList.add(player)
+        return true
+    else:
+        return false
     pass
 
 
