@@ -39,12 +39,19 @@ class group(object):
 
   """
   def __init__(self, nameIn):
-      global adminList = []
-      global memberList = []
-      global banList = []
-      global groupName = nameIn
-      global games = []
-      global waitList = []
+      global adminList
+      global memberList
+      global banList
+      global groupName
+      global games
+      global waitList
+      
+      adminList = []
+      memberList = []
+      banList = []
+      groupName = nameIn
+      games = []
+      waitList = []
       
   def _launchGame(self, gameToLaunch):
     """
@@ -79,10 +86,10 @@ class group(object):
     @return bool :
     @author
     """
-    if code == joinCode and privacy == "public"
+    if code == joinCode and privacy == "public":
       waitlist.add(player)
       return True
-    else if privacy == "private":
+    elif privacy == "private":
       approval = requestAdmin(player)
       return approval
     else:

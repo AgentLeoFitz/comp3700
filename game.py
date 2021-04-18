@@ -17,9 +17,13 @@ class game(object):
   genre  (protected)
 
   """
-  def __init__(self, nameIn)
-    global name = nameIn
-    global players = []
+  def __init__(self, nameIn, genreIn):
+    global name
+    global genre
+    global players
+    name = nameIn
+    genre = genreIn
+    players = []
     
   def start(self):
     """
@@ -42,12 +46,11 @@ class game(object):
 
   def endGame(self):
     """
-     
+    
 
     @return bool :
     @author
     """
     pass
-
 
 
