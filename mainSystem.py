@@ -1,10 +1,13 @@
 import game
 import group
 import user
+from hashlib import sha512
 
 allGames = []
+userDatabase = dict()
 
-makeGames()
-    
-def makeGames():
-    allGames.add(new 
+def createUser(userName,password)
+    hashGen = sha512()
+    hashGen.update(password)
+    hash = hashGen.hexdigest()
+    userDatabase.update({userName,hash})
