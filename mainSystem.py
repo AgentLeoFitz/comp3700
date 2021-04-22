@@ -15,7 +15,11 @@ def createUser(userName, password):
     hashGen.update(bytearray(str(password), encoding='utf-8'))
     pHash = hashGen.hexdigest()
     pwordDatabase.update({userName: pHash})
-    userDatabase.update({userName: user.__init__(userName, password)})
+    uTemp = user.user(userName, password)
+    print("######")
+    print(uTemp)
+    print("######")
+    userDatabase.update({userName:uTemp})
     return True
 
 
@@ -45,6 +49,7 @@ class mainMenu(tk.Frame):
 
     def launchMenu(self):
         currentUser = logIn(self.unameEntry.get(), self.pwordEntry.get())
+        print(currentUser)
         newDash = dash(self, currentUser)
 
     def makeUser(self):
