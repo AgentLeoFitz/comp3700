@@ -45,20 +45,19 @@ class mainMenu(tk.Frame):
         newDash = dash(self, currentUser)
 
     def makeUser(self):
-        createUser(self.unameEntry, self.pwordEntry)
+        createUser(self.unameEntry.get(), self.pwordEntry.get())
 
     def __init__(self, root):
         tk.Frame.__init__(self, root)
         self.root = root
         root.title("Log In")
         tk.Label(root, text="Username: ").grid(row=0, column=0)
-        username = tk.Entry(root).grid(row=0, column=1)
-        self.unameEntry = username
+        self.unameEntry = tk.Entry(root)
+        self.unameEntry.grid(row=0, column=1)
 
         tk.Label(root, text="Password: ").grid(row=1, column=0)
-        password = tk.Entry(root).grid(row=1, column=1)
-        self.pwordEntry = password
-
+        self.pwordEntry = tk.Entry(root)
+        self.pwordEntry.grid(row=1, column=1)
         inButt = tk.Button(root, text='Login', fg='forest green', command=self.launchMenu).grid(row=2, column=0)
         newButt = tk.Button(root, text='Create', fg='red', command=self.makeUser).grid(row=2, column=1)
 
