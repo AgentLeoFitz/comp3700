@@ -36,7 +36,12 @@ class dash(tk.Frame):
         tk.Frame.__init__(self, parentWin.root)
         self.root = tk.Tk()
         self.root.title(owner.getName())
-        tk.Label(self.root,text="EFDGSDDA").pack()
+        tk.Label(self.root,text="Group Menu").grid(row=0, column=0)
+        tk.Label(self.root, text="Group Name: ").grid(row=1, column=0)
+        groupName = tk.Entry(self.root)
+        groupName.grid(row=1, column=1)
+        inButt = tk.Button(self.root, text="Create Group", fg="forest green", command=group).grid(row=2, column=0)
+        newButt = tk.Button(self.root, text="Join Group", fg="red", command=group).grid(row=2, column=1)
         self.mainloop()
 
 
