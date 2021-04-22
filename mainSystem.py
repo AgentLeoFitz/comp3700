@@ -20,13 +20,16 @@ def createUser(userName, password):
 
 
 def logIn(userName, password):
-    if userName in pwordDatabase:
+    if userName in userDatabase:
+        print("IN")
         hashGen = sha512()
         hashGen.update(bytearray(password, encoding='utf-8'))
         pHash = hashGen.hexdigest()
         if pHash == pwordDatabase[userName]:
+            print("PWORD")
             return userDatabase[userName]
-    return None
+        else:
+            return None
 
 
 class dash(tk.Frame):
