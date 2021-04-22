@@ -16,21 +16,16 @@ def createUser(userName, password):
     pHash = hashGen.hexdigest()
     pwordDatabase.update({userName: pHash})
     uTemp = user.user(userName, password)
-    print("######")
-    print(uTemp)
-    print("######")
     userDatabase.update({userName:uTemp})
     return True
 
 
 def logIn(userName, password):
     if userName in userDatabase:
-        print("IN")
         hashGen = sha512()
         hashGen.update(bytearray(password, encoding='utf-8'))
         pHash = hashGen.hexdigest()
         if pHash == pwordDatabase[userName]:
-            print("PWORD")
             return userDatabase[userName]
         else:
             return None
@@ -39,8 +34,10 @@ def logIn(userName, password):
 class dash(tk.Frame):
     def __init__(self, parentWin, owner):
         tk.Frame.__init__(self, parentWin.root)
-        self.root = parentWin.root
+        self.root = tk.Tk()
         self.root.title(owner.getName())
+        tk.Label(self.root,text="EFDGSDDA").pack()
+        self.mainloop()
 
 
 class mainMenu(tk.Frame):
@@ -49,7 +46,6 @@ class mainMenu(tk.Frame):
 
     def launchMenu(self):
         currentUser = logIn(self.unameEntry.get(), self.pwordEntry.get())
-        print(currentUser)
         newDash = dash(self, currentUser)
 
     def makeUser(self):
