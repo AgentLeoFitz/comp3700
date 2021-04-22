@@ -30,10 +30,10 @@ def logIn(userName, password):
 
 
 class dash(tk.Frame):
-    def __init__(self, root, owner):
-        tk.Frame.__init__(self, root)
-        self.root = root
-        root.title(owner.getName())
+    def __init__(self, parentWin, owner):
+        tk.Frame.__init__(self, parentWin.root)
+        self.root = parentWin.root
+        self.root.title(owner.getName())
 
 
 class mainMenu(tk.Frame):
